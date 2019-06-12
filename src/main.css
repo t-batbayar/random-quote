@@ -1,0 +1,131 @@
+:global {
+	@import "/node_modules/normalize.css/normalize.css";
+}
+
+:root {
+	--main-transition: all 0.3s ease;
+	--shadow: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* 
+	Default 16px * 0.625 = 10rem
+	1.2rem = 12px
+*/
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+body {
+	margin: 0;
+	line-height: 2;
+	font-family: 'Noto Serif', serif;
+}
+
+button {
+	border: none;
+}
+
+.main-container {
+	min-height: 100vh;
+	transition: var(--main-transition);
+}
+
+.quote-machine {
+	color: white;
+	border-radius: 2px;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: calc(100vh - 70vh) 20px 0;
+}
+
+.quote-controller {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.quote-controller .tweet,
+.quote-controller .new-quote {
+	font-family: inherit;
+	cursor: pointer;
+	background: none;
+	border-radius: 2px;
+	font-size: 12px;
+	color: white;
+	border: 2px solid white;	
+	text-decoration: none;
+	padding: 4px 24px;
+	z-index: 1;
+}
+
+.quote-machine .quote-author {
+	position: relative;
+	font-family: 'Dancing Script', cursive;
+	font-size: 24px;
+	margin: 60px 0 20px;
+	height: 40px;
+}
+
+.quote-machine .quote-author p {
+	margin: 0;
+}
+
+.quote-machine .quote-text {
+	position: relative;
+	font-size: 24px;
+	font-weight: 200;
+}
+
+.quote-machine .quote-text .quote {
+	text-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+	padding: 0 70px;
+}
+
+.quote-machine .quote-text .double-quote-start,
+.quote-machine .quote-text .double-quote-end {
+	position: absolute;
+	font-family: 'Palanquin', sans-serif;
+	font-size: 160px;
+	line-height: 0;
+}
+
+.quote-machine .quote-text .double-quote-start {
+	text-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+	left: 0;
+	top: 0;
+	transform: rotate(180deg);
+}
+
+.quote-machine .quote-text .double-quote-end {
+	text-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+	top: 58px;
+	right: 0;
+}
+
+@media screen and (max-width: 600px) {
+	.quote-machine .quote-author {
+		font-size: 32px;
+		height: 64px;
+	}
+
+	.quote-machine .quote-text {
+		font-size: 22px;
+	}
+
+	.quote-machine .quote-text .quote {
+		padding: 0 50px;
+	}
+
+	.quote-machine .quote-text .double-quote-start,
+	.quote-machine .quote-text .double-quote-end {
+		font-size: 120px;
+	}
+
+	.quote-machine .quote-text .double-quote-end {
+		top: 48px;
+	}
+}
