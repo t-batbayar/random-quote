@@ -39,7 +39,7 @@ button {
 	border-radius: 2px;
 	max-width: 640px;
 	margin: 0 auto;
-	padding: calc(100vh - 70vh) 20px 0;
+	padding: calc(30vh) 20px 0;
 }
 
 .quote-controller {
@@ -106,6 +106,12 @@ button {
 	right: 0;
 }
 
+@media screen and (max-width: 1000px) {
+	.quote-machine {
+		padding: calc(10vh) 20px 0;
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.quote-machine .quote-author {
 		font-size: 32px;
@@ -127,5 +133,20 @@ button {
 
 	.quote-machine .quote-text .double-quote-end {
 		top: 48px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.quote-machine .quote-text {
+		font-size: 18px;
+	}
+
+	.quote-machine .quote-text .double-quote-start,
+	.quote-machine .quote-text .double-quote-end {
+		font-size: 90px;
+	}
+
+	.quote-machine .quote-text .double-quote-end {
+		top: 36px;
 	}
 }
